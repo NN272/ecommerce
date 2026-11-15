@@ -10,9 +10,9 @@ const Header = () => {
         <div className="flex justify-between items-center text-base" style={{height: "150px", width: "95%"}}>
             <div className="flex justify-between items-center" style={{width: "20%"}}>
                 <img src={menu} />
-                <h3>Home</h3>
-                <h3>Collections</h3>
-                <h3>New</h3>
+                <p className='text-xl'>Home</p>
+                <p className='text-xl'>Collections</p>
+                <p className='text-xl'>New</p>
             </div>
             <img src={logo} />
             <div style={{width: "20%"}} className="flex justify-around items-center">
