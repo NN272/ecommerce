@@ -1,6 +1,7 @@
 import React from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 import Dropdown from '../../common/Dropdown/Dropdown';
+import Sizes from '../../common/Sizes/Sizes';
 
 const Filters = () => {
     const sizes = ["XS", "S", "M", "L", "XL", "2XL"];
@@ -35,10 +36,7 @@ const Filters = () => {
     return (
         <div style={{width: "20%"}}>
             <p className='text-xl bold'>Filters</p>
-            <p className='text-base bold' style={{marginTop: "1rem"}}>Size</p>
-            <div className='flex justify-around items-center' style={{width: "70%"}}>
-                {sizes.map(item => <button className='border-2 border-gray-700 size-10 flex justify-center items-center'>{item}</button>)}
-            </div>
+            <Sizes />
             <Accordion style={{width: "80%"}}>
                 {filters.map(item => <Dropdown ekey={item.id} header={item.title} filters={item.items}></Dropdown>)}
             </Accordion>
