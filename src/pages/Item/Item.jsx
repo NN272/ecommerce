@@ -4,6 +4,7 @@ import Sizes from "../../components/common/Sizes/Sizes";
 import Images from "../../components/layout/Images/Images";
 import Details from "../../components/layout/Details/Details";
 import Header from "../../components/layout/Header/Header";
+import Button from "../../components/common/Button/Button";
 
 export default function Item() {
 
@@ -23,11 +24,7 @@ export default function Item() {
                     <button className="hover:text-neutral-900">Measurement guide</button>
                     </p>
                 </div>
-                <button onClick={() => console.log("add")}
-                    className="mt-6 w-full bg-gray-300 py-3 text-xs font-medium uppercase tracking-wide transition hover:bg-neutral-900 hover:text-white"
-                >
-                    Add
-                </button>
+                <Button text="Add" />
             </div>
         </div>
     </div>

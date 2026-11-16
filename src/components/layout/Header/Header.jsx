@@ -4,15 +4,16 @@ import logo from '../../../assets/logo.png'
 import favorite from '../../../assets/favorite.png'
 import cart from '../../../assets/cart.png'
 import account from '../../../assets/account.png'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
         <div className="flex justify-between items-center text-base" style={{height: "150px", width: "95%"}}>
             <div className="flex justify-between items-center" style={{width: "20%"}}>
                 <img src={menu} />
-                <p className='text-xl'>Home</p>
-                <p className='text-xl'>Collections</p>
-                <p className='text-xl'>New</p>
+                <Link to="/" className='text-base no-underline text-black'>Home</Link>
+                <Link to="/collections" className='text-base no-underline text-black'>Collections</Link>
+                <Link to="/products" className='text-base no-underline text-black'>Products</Link>
             </div>
             <img src={logo} />
             <div style={{width: "20%"}} className="flex justify-around items-center">
