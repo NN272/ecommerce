@@ -8,6 +8,7 @@ import Checkout from './pages/Checkout/Checkout.jsx'
 import {BrowserRouter} from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 import CheckoutInfo from './components/layout/CheckoutInfo/CheckoutInfo.jsx'
+import Cart from './pages/Cart/Cart.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="shipping" element={<CheckoutInfo />} />
           <Route path="payment" element={<CheckoutInfo />} />
         </Route>
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

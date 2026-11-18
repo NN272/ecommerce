@@ -7,7 +7,7 @@ const Dropdown = (props) => {
         <Accordion.Item style={{marginTop: "1rem"}} eventKey={props.ekey}>
             <Accordion.Header>{props.header}</Accordion.Header>
             <Accordion.Body>
-                {props.filters.map(item => <div><input type="checkbox" />{item}</div>)}
+                {props.filters.map(item => <div><input type="checkbox" />&nbsp;&nbsp;{item}</div>)}
             </Accordion.Body>
         </Accordion.Item>
     )

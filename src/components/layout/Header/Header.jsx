@@ -18,7 +18,7 @@ const Header = () => {
             <img src={logo} />
             <div style={{width: "20%"}} className="flex justify-around items-center">
                 <img src={favorite} alt="" />
-                <img src={cart} alt="" />
+                <Link to="/cart/"><img src={cart} alt="" /></Link>
                 <img src={account} alt="" />
             </div>
         </div>
