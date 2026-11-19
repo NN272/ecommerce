@@ -9,9 +9,12 @@ import {BrowserRouter} from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 import CheckoutInfo from './components/layout/CheckoutInfo/CheckoutInfo.jsx'
 import Cart from './pages/Cart/Cart.jsx'
+import { Provider } from 'react-redux'
+import store from './store/store.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -25,5 +28,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
+    </Provider>
   </StrictMode>,
 )

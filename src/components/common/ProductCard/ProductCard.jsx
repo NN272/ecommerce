@@ -1,7 +1,16 @@
 import React from 'react'
 import '../../../styles/ProductCard.css'
+import { useDispatch } from 'react-redux'
+import {cartHandle} from '../../../store/slices/productReducer'
 
 const ProductCard = (props) => {
+    const dispatch = useDispatch();
+
+    const handleCartEvent = () => {
+        const id = props.id;
+        dispatch(cartHandle(id));
+    }
+
     return (
         <article className="product-card">
             <div className="product-card__media">
@@ -14,6 +23,7 @@ const ProductCard = (props) => {
                 type="button"
                 className="product-card__add"
                 aria-label="Add Item"
+                onClick={handleCartEvent}
                 >
                 +
                 </button>

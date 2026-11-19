@@ -2,7 +2,6 @@ import React from 'react'
 import Accordion from 'react-bootstrap/Accordion';
 
 const Dropdown = (props) => {
-    console.log(props);
     return (
         <Accordion.Item style={{marginTop: "1rem"}} eventKey={props.ekey}>
             <Accordion.Header>{props.header}</Accordion.Header>

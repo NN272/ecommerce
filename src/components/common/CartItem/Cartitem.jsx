@@ -1,18 +1,18 @@
 import React from 'react'
 import photo1 from '../../../assets/ProductCard1.png'
 
-const CartItem = () => {
+const CartItem = (props) => {
     return (
         <div className='w-[24rem] flex'>
             <div className='max-w-[21rem]'>
-                <img src={photo1} alt="" />
+                <img src={props.image} alt="" />
                     <div className='mt-1'>
                         <p className='text-sm color-gray-500'>
-                            Cotton T-Shirt
+                            {props.name}
                         </p>
                         <div className='w-full flex justify-between'>
-                            <p className='text-base'>Full Sleeve Zipper</p>
-                            <p className='text-base'>$99</p>
+                            <p className='text-base'>{props.label}</p>
+                            <p className='text-base'>${props.price}</p>
                             </div>
                         </div>
                     </div>
